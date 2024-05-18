@@ -14,7 +14,7 @@ Bitcoin Name System (BNS) API is a RESTful API built with Node.js and Express.js
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Andrej656/bns-api
 
 2. Navigate to the project directory:
     ```bash
@@ -26,3 +26,53 @@ Bitcoin Name System (BNS) API is a RESTful API built with Node.js and Express.js
 Create a .env file in the root directory and define the following variables:
    ```bash
    PORT=3000
+5. Start the server:
+   ```bash
+   npm start
+6. Access the API at http://localhost:3000 or the specified port.
+
+
+
+## Usage
+
+## API Endpoints:
+
+POST /api/bns/names: Create a new BNS name.
+PUT /api/bns/names/:nameId: Update the state of a BNS name.
+GET /api/bns/names/:nameId: Get details of a specific BNS name.
+DELETE /api/bns/names/:nameId: Delete a BNS name.
+POST /api/bns/namespaces: Create a new BNS namespace.
+PUT /api/bns/namespaces/:namespaceId: Update the state of a BNS namespace.
+GET /api/bns/namespaces/:namespaceId: Get details of a specific BNS namespace.
+DELETE /api/bns/namespaces/:namespaceId: Delete a BNS namespace.
+POST /api/bns/subdomains: Create a new BNS subdomain.
+PUT /api/bns/subdomains/:subdomainId: Update the state of a BNS subdomain.
+GET /api/bns/subdomains/:subdomainId: Get details of a specific BNS subdomain.
+DELETE /api/bns/subdomains/:subdomainId: Delete a BNS subdomain.
+
+## 1. Create a new BNS name:
+```bash
+
+POST /api/bns/names
+Content-Type: application/json
+
+{
+  "name": "example",
+  "owner": "owner-public-key",
+  "state": {
+    "data": "Some state data"
+  }
+
+//Response
+
+{
+  "id": "1",
+  "name": "example",
+  "owner": "owner-public-key",
+  "state": {
+    "data": "Some state data"
+  },
+  "createdAt": "2024-05-20T12:00:00.000Z",
+  "updatedAt": "2024-05-20T12:00:00.000Z"
+}
+
