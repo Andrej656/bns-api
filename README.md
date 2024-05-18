@@ -35,24 +35,33 @@ Create a .env file in the root directory and define the following variables:
 
 ## Usage
 
-## API Endpoints:
+## BNS API Endpoints
 
-POST /api/bns/names: Create a new BNS name.
-PUT /api/bns/names/:nameId: Update the state of a BNS name.
-GET /api/bns/names/:nameId: Get details of a specific BNS name.
-DELETE /api/bns/names/:nameId: Delete a BNS name.
-POST /api/bns/namespaces: Create a new BNS namespace.
-PUT /api/bns/namespaces/:namespaceId: Update the state of a BNS namespace.
-GET /api/bns/namespaces/:namespaceId: Get details of a specific BNS namespace.
-DELETE /api/bns/namespaces/:namespaceId: Delete a BNS namespace.
-POST /api/bns/subdomains: Create a new BNS subdomain.
-PUT /api/bns/subdomains/:subdomainId: Update the state of a BNS subdomain.
-GET /api/bns/subdomains/:subdomainId: Get details of a specific BNS subdomain.
-DELETE /api/bns/subdomains/:subdomainId: Delete a BNS subdomain.
+### Names
+
+- **POST /api/bns/names:** Create a new BNS name.
+- **PUT /api/bns/names/:nameId:** Update the state of a BNS name.
+- **GET /api/bns/names/:nameId:** Get details of a specific BNS name.
+- **DELETE /api/bns/names/:nameId:** Delete a BNS name.
+
+### Namespaces
+
+- **POST /api/bns/namespaces:** Create a new BNS namespace.
+- **PUT /api/bns/namespaces/:namespaceId:** Update the state of a BNS namespace.
+- **GET /api/bns/namespaces/:namespaceId:** Get details of a specific BNS namespace.
+- **DELETE /api/bns/namespaces/:namespaceId:** Delete a BNS namespace.
+
+### Subdomains
+
+- **POST /api/bns/subdomains:** Create a new BNS subdomain.
+- **PUT /api/bns/subdomains/:subdomainId:** Update the state of a BNS subdomain.
+- **GET /api/bns/subdomains/:subdomainId:** Get details of a specific BNS subdomain.
+- **DELETE /api/bns/subdomains/:subdomainId:** Delete a BNS subdomain.
 
 ## 1. Create a new BNS name:
-```bash
+**Request:**
 
+```bash
 POST /api/bns/names
 Content-Type: application/json
 
@@ -63,7 +72,7 @@ Content-Type: application/json
     "data": "Some state data"
   }
 
-//Response
+Response:
 
 {
   "id": "1",
@@ -75,4 +84,9 @@ Content-Type: application/json
   "createdAt": "2024-05-20T12:00:00.000Z",
   "updatedAt": "2024-05-20T12:00:00.000Z"
 }
+
+
+
+
+
 
