@@ -10,6 +10,11 @@ Bitcoin Name System (BNS) API is a RESTful API built with Node.js and Express.js
 - Implement BNS operations such as name registration, updating, and transfer.
 - Secure interactions with the Stacks blockchain using appropriate authentication and authorization mechanisms.
 
+## Prerequisites
+
+Node Js
+Mongo DB
+
 ## Installation
 
 1. Clone the repository:
@@ -25,7 +30,11 @@ Bitcoin Name System (BNS) API is a RESTful API built with Node.js and Express.js
 4. Set up environment variables:
 Create a .env file in the root directory and define the following variables:
    ```bash
-   PORT=3000
+  PORT=3000
+MONGO_URI=your_mongodb_connection_string
+STACKS_PRIVATE_KEY=your_stacks_private_key
+BITCOIN_PRIVATE_KEY=your_bitcoin_private_key
+
 5. Start the server:
    ```bash
    npm start
