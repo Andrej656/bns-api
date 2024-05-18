@@ -1,24 +1,23 @@
 {
   "name": "bns-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "BNS API for managing BNS names with Stacks and Bitcoin",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@stacks/blockchain-api-client": "^7.10.0",
-    "@stacks/network": "^6.13.0",
-    "@stacks/transactions": "^6.15.0",
-    "axios": "^1.6.8",
-    "bitcoinjs-lib": "^6.1.5",
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "joi": "^17.13.1",
-    "mongoose": "^8.4.0"
-  }
+    "@blockstack/stacks-transactions": "^0.6.1",
+    "@blockstack/stacks-network": "^0.6.1",
+    "@blockstack/stacks-blockchain-api-client": "^0.6.1",
+    "axios": "^0.21.1",
+    "bitcoinjs-lib": "^5.2.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "mongoose": "^5.10.9"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
