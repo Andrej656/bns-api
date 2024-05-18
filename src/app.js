@@ -1,26 +1,20 @@
+// src/app.js
+
 const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const bnsRoutes = require('./routes/bnsRoutes');
 const errorHandler = require('./middleware/errorHandler');
-require('dotenv').config();
+const authRoutes = require('./routes/authRoutes');
+// Import other routes and middleware as needed
 
 const app = express();
-const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use('/bns', bnsRoutes);
+// Body parser middleware
+app.use(express.json());
+
+// Routes
+app.use('/api/auth', authRoutes);
+// Add other routes here
+
+// Error handling middleware
 app.use(errorHandler);
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false
-}).then(() => {
-  console.log('Connected to MongoDB');
-  app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
-}).catch(err => {
-  console.error('MongoDB connection error:', err);
-});
+module.exports = app;
